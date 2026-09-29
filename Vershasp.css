@@ -1,1 +1,69 @@
+.veshpars-body{
+    background-color: black;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative
+}
+
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: move-bubbles infinite linear;
+    opacity: 0.25;
+}
+
+@keyframes move-bubbles {
+    0% { transform: translateY(100vh); }
+    100% { transform: translateY(-100vh); }
+}
+.ertegha-go {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.h2-ertegha {
+    font-size: 2rem;
+    margin: 0;
+    font-family: sans-serif, Tahoma;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+
+.h6-ertegha {
+    font-size: 1rem;
+    margin: 0;
+    color: #b0b0d0;
+    font-family: sans-serif, Tahoma;
+}
+
+.btn-ertegha {
+    margin-top: 10px;
+    padding: 10px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-ertegha:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+}
 
