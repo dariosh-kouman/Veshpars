@@ -8,6 +8,39 @@
 </head>
 <body class="veshpars-body">
 
+  <nav class="navbaz">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجوی محصول "autocomplete="off">
+      <ul id="searchResults" class="results-list"></ul>
+  </div>
+  </nav>
+
+    <nav class="navbar">
+    
+      <div class="logo">
+        <img src="image-vershpars/veshpars.jpg" alt="veshpars logo" class="logo-img">
+        <span class="ss">Welcome to Veshpars</span>
+    </div>    
+        
+        <ul class="nav-links">
+            <li><a href="#">صفحه اصلی</a></li>
+            <li><a href="#">محصولات</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">ارتباط</a></li>
+        </ul>
+
+        <div class="nav-btn">
+            <button>ورود</button>
+            <button>ثبت‌نام</button>
+        </div>
+    </nav>
+
+    <div class="ertegha-go">
+        <h2 class="h2-ertegha">ارتقاع سایت</h2>
+        <h6 class="h6-ertegha">شما میتوانید با وشپارس سایت های خود را ارتقاع دهید</h6>
+        <button class="btn-ertegha">مشاهده</button>
+    </div>
+
     <script>
         for (let i = 0; i < 30; i++) {
             let bubble = document.createElement('div');
@@ -17,15 +50,9 @@
             bubble.style.height = size + 'px';
             bubble.style.background = Math.random() > 0.5 ? '#6a11cb' : '#2575fc';
             bubble.style.left = Math.random() * 100 + 'vw';
-            document.body.appendChild(bubble);
             bubble.style.animationDuration = (Math.random() * 13 + 12) + 's';
-
+            document.body.appendChild(bubble);
         }
     </script>
-    <div class="ertegha-go">
-        <h2 class="h2-ertegha">ارتفاع سایت</h2>
-        <h6 class="h6-ertegha">شما میتوانید با وشپارس سایت های خود را ارتفاع دهید</h6>
-        <button class="btn-ertegha">مشاهده</button>
-    </div>
 </body>
 </html>
