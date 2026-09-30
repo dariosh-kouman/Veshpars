@@ -1,69 +1,223 @@
 .veshpars-body{
-    background-color: black;
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    position: relative
+  background-color: black;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative
 }
 
 .bubble {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(2px);
-    animation: move-bubbles infinite linear;
-    opacity: 0.25;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  animation: move-bubbles infinite linear;
+  opacity: 0.25;
 }
 
 @keyframes move-bubbles {
-    0% { transform: translateY(100vh); }
-    100% { transform: translateY(-100vh); }
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-100vh); }
 }
 .ertegha-go {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #ffffff;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 15px;
+  transform: translate(-50%, -50%);
+  box-shadow: 4px 4px 4px #ffffff;
+  text-align: center;
+  color: #ffffff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  width: 600px;
+  height: 200px;
+  border: 2px solid #3498db;
+  gap: 12px;
 }
 
 .h2-ertegha {
-    font-size: 2rem;
-    margin: 0;
-    font-family: sans-serif, Tahoma;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+  font-size: 2rem;
+  margin: 0;
+  font-family: sans-serif, Tahoma;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
 }
 
 
 .h6-ertegha {
-    font-size: 1rem;
-    margin: 0;
-    color: #b0b0d0;
-    font-family: sans-serif, Tahoma;
+  font-size: 1rem;
+  margin: 0;
+  color: #b0b0d0;
+  font-family: sans-serif, Tahoma;
 }
 
 .btn-ertegha {
-    margin-top: 10px;
-    padding: 10px 28px;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #ffffff;
-    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-ertegha:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 40px;
+  background-color: #1a1a24;
+  border-bottom: 2px solid #ff4757;
+}
+
+.logo {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none; 
+  color: #dcdde1;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4757;
+}
+
+.nav-btn button {
+  padding: 8px 18px;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.nav-btn button:hover {
+  background-color: #e84118;
+  transform: translateY(-2px);
+}
+
+.logo-img {
+width: 60px; 
+height: 60px;
+border-radius: 5px;
+object-fit: contain;
+vertical-align: middle;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px; 
+color: #fff;
+font-weight: bold;
+font-size: 18px;
+}
+
+.ss{
+color: #6a11cb;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.search-box {
+position: relative;
+width: 250px;
+}
+
+.search-box input {
+width: 100%;
+padding: 10px 15px;
+border-radius: 20px;
+border: 1px solid #444;
+background-color: #1a1a24;
+color: #fff;
+outline: none;
+font-size: 14px;
+transition: 0.3s;
+}
+
+.search-box input:focus {
+border-color: #2575fc;
+box-shadow: 0 0 10px rgba(37, 117, 252, 0.4);
+}
+
+.results-list {
+position: absolute;
+top: 110%;
+right: 0;
+width: 100%;
+background: #232331;
+border-radius: 10px;
+list-style: none;
+padding: 0;
+margin: 0;
+box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+overflow: hidden;
+display: none;
+z-index: 999;
+}
+
+.results-list li {
+padding: 10px 15px;
+color: #eee;
+cursor: pointer;
+border-bottom: 1px solid #2f2f40;
+transition: background 0.2s;
+}
+
+.results-list li:hover {
+background: #2575fc;
+color: #fff;
+}
+
+.navbaz {
+position: sticky;
+top: 0;
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+background-color: #1a1a24;
+border-bottom: 2px solid #ff4757;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 25px;
+}
