@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../veshpars.css">
+    <title>وشپارس/ارتقاع سایت</title>
+</head>
+<body class="veshpars-body">
+    
+        <nav class="navbaz">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="جستجو..." autocomplete="off">
+                <ul id="searchResults" class="results-list"></ul>
+            </div>
+
+        </nav>
+
+        <nav class="navbar">
+    
+            <div class="logo">
+                <img src="../image-veshpars/veshpars.png" alt="veshpars_logo" class="logo-img">
+                <span class="ss">Welcome to Veshpars</span>
+            </div>    
+        
+            <ul class="nav-links">
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">محصولات</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <li><a href="#">ارتباط</a></li>
+            </ul>
+
+            <div class="nav-btn">
+                <button>ورود</button>
+                <button>ثبت‌نام</button>
+            </div>
+        </nav>
+        <div>
+        <h2>توضیحات</h2>
+        <h6> شما میتوانید با ارسال کد های سایت خود و توضیحات تغییرات لازم برای سایت خود و مقدار تعیین شده ی هزینه ، سایت خود را بروز رسانی کنید. شما درون سایت وشپارس هر نوع تغییراتی که دلتان بخواهد میتوانید در قسمت توضیحات ارتقاع سایت که بعد خرید فعال میشود بنویسید که ما در مدت زمان کمی سایت شما را طبق خواستیتان ارتقاع دهیم.</h6>
+        </div>
+        <script>
+        for (let i = 0; i < 30; i++) {
+            let bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            let size = Math.random() * 30 + 10;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.background = Math.random() > 0.5 ? '#6a11cb' : '#2575fc';
+            bubble.style.left = Math.random() * 100 + 'vw';
+            bubble.style.animationDuration = (Math.random() * 13 + 12) + 's';
+            document.body.appendChild(bubble);
+        }
+    </script>
+    <script src="../veshpars.js"></script>
+</body>
+</html>
