@@ -2,31 +2,30 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وشپارس/ارتباط</title>
     <link rel="stylesheet" href="../veshpars.css">
-    <link rel="icon" type="image/x-icon" href="image-veshpars/veshpars.jpg">
+    <title>وشپارس/ارتقاع سایت</title>
 </head>
 <body class="veshpars-body">
 
-  <nav class="navbaz">
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="جستجوی محصول "autocomplete="off">
-      <ul id="searchResults" class="results-list"></ul>
-  </div>
-  </nav>
+    <nav class="navbaz">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="جستجو..." autocomplete="off">
+            <ul id="searchResults" class="results-list"></ul>
+        </div>
+    </nav>
 
     <nav class="navbar">
-    
-      <div class="logo">
-        <img src="../image-vershpars/veshpars.jpg" alt="veshpars logo" class="logo-img">
-        <span class="ss">Welcome to Veshpars</span>
-    </div>    
-        
+        <div class="logo">
+            <img src="E:\veshpars-progect\Veshpars-progect\image-vershpars\veshpars.jpg" alt="veshpars_logo" class="logo-img">
+            <span class="ss">Welcome to Veshpars</span>
+        </div>
+
         <ul class="nav-links">
             <li><a href="../veshpars.html">صفحه اصلی</a></li>
             <li><a href="#">محصولات</a></li>
-            <li><a href="mahsool/darB.html">درباره ما</a></li>
+            <li><a href="#">درباره ما</a></li>
             <li><a href="#">ارتباط</a></li>
         </ul>
 
@@ -35,104 +34,12 @@
             <button>ثبت‌نام</button>
         </div>
     </nav>
-    <div class="div-contact-container">
-        <h2 class="contact-title">ارتباط مستقیم با وشپارس</h2>
-        <p class="contact-subtitle">پیام خود را بنویسید تا مستقیماً برای ما ارسال شود</p>
-    
-        <div class="contact-form">
-            <label class="form-label">نام و نام خانوادگی شما:</label>
-            <input type="text" id="senderName" class="form-input" placeholder="مثال: علی رضایی" dir="rtl">
-    
-            <label class="form-label">متن پیام یا درخواست:</label>
-            <textarea id="senderMsg" class="form-textarea" rows="4" placeholder="پیام خود را اینجا بنویسید..." dir="rtl"></textarea>
-            <div id="statusAlert" class="status-alert"></div>
-    
-            <div class="btn-group">
-                <button type="button" class="btn-send-whatsapp" onclick="handleSendMessage('whatsapp')">
-                    ارسال به واتساپ 💬
-                </button>
-                <button type="button" class="btn-send-sms" onclick="handleSendMessage('sms')">
-                    ارسال با پیامک 📱
-                </button>
-            </div>
-        </div>
+
+    <div class="div-tozihat-ertegha">
+        <h2 class="h2-tozihat-ertegha">توضیحات</h2>
+        <h4 class="h4-tozihat-ertegha">شما میتوانید با ارسال کد های سایت خود و توضیحات لازم برای سایت خود و مقدار تعیین شده ی هزینه ، سایت خود را بروز رسانی کنید. شما درون سایت وشپارس هر نوع تغییراتی که دلتان بخواهد میتوانید در قسمت توضیحات ارتقاع سایت که بعد خرید فعال میشود بنویسید که ما در مدت زمان کمی سایت شما را طبق خواستیتان ارتقاع دهیم.</h4>
     </div>
-    
-    <script>
-        const MAX_MESSAGES = 5;
-        const TIME_LIMIT_MS = 24 * 60 * 60 * 1000;
-    
-        function showStatus(text, type) {
-            const alertBox = document.getElementById('statusAlert');
-            alertBox.innerText = text;
-            alertBox.className = 'status-alert ' + (type === 'success' ? 'alert-success' : 'alert-error');
-            alertBox.style.display = 'block';
-    
-            setTimeout(() => {
-                alertBox.style.display = 'none';
-            }, 5000);
-        }
-    
-        function checkRateLimit() {
-            const now = Date.now();
-            let messageData = JSON.parse(localStorage.getItem('veshpars_msg_limit')) || { count: 0, firstSentTime: now };
-    
-            // اگر از اولین پیام ۲۴ ساعت گذشته بود، ریست کن
-            if (now - messageData.firstSentTime > TIME_LIMIT_MS) {
-                messageData = { count: 0, firstSentTime: now };
-                localStorage.setItem('veshpars_msg_limit', JSON.stringify(messageData));
-            }
-    
-            if (messageData.count >= MAX_MESSAGES) {
-                const hoursLeft = Math.ceil((TIME_LIMIT_MS - (now - messageData.firstSentTime)) / (1000 * 60 * 60));
-                showStatus(`ارسال نشد! سقف ۵ پیام شما پر شده است. لطفاً ${hoursLeft} ساعت دیگر تلاش کنید. ❌`, 'error');
-                return false;
-            }
-    
-            return true;
-        }
-    
-        function increaseMessageCount() {
-            const now = Date.now();
-            let messageData = JSON.parse(localStorage.getItem('veshpars_msg_limit')) || { count: 0, firstSentTime: now };
-            
-            if (messageData.count === 0) {
-                messageData.firstSentTime = now;
-            }
-            messageData.count += 1;
-            localStorage.setItem('veshpars_msg_limit', JSON.stringify(messageData));
-        }
-    
-        function handleSendMessage(method) {
-            const name = document.getElementById('senderName').value.trim();
-            const msg = document.getElementById('senderMsg').value.trim();
-            if (!msg) {
-                showStatus('ارسال نشد! لطفاً متن پیام را وارد کنید. ❌', 'error');
-                return;
-            }
-            if (!checkRateLimit()) {
-                return;
-            }
-    
-            try {
-                if (method === 'whatsapp') {
-                    const fullText = "سلام وشپارس، من " + (name ? name : "کاربر سایت") + " هستم.\n\nپیام من:\n" + msg;
-                    const encodedMsg = encodeURIComponent(fullText);
-                    window.open("https://wa.me/989372522029?text=" + encodedMsg, "_blank");
-                } else if (method === 'sms') {
-                    const fullText = "از طرف: " + (name ? name : "ناشناس") + " - پیام: " + msg;
-                    const encodedMsg = encodeURIComponent(fullText);
-                    window.location.href = "sms:09372522029?body=" + encodedMsg;
-                }
-                increaseMessageCount();
-                showStatus('پیام با موفقیت ارسال شد! ✅', 'success');
-                document.getElementById('senderMsg').value = '';
-            } catch (e) {
-                showStatus('ارسال نشد! خطایی رخ داد، دوباره تلاش کنید. ❌', 'error');
-            }
-        }
-    </script>
-    
+
     <script>
         for (let i = 0; i < 30; i++) {
             let bubble = document.createElement('div');
@@ -146,5 +53,6 @@
             document.body.appendChild(bubble);
         }
     </script>
+    <script src="../veshpars.js"></script>
 </body>
 </html>
