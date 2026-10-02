@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وشپارس/محصولات</title>
+    <link rel="stylesheet" href="../veshpars.css">
+    <link rel="icon" type="image/x-icon" href="image-veshpars/veshpars.jpg">
+</head>
+<body class="veshpars-body">
+
+  <nav class="navbaz">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجوی محصول "autocomplete="off">
+      <ul id="searchResults" class="results-list"></ul>
+  </div>
+  </nav>
+
+    <nav class="navbar">
+    
+      <div class="logo">
+        <img src="../image-vershpars/veshpars.jpg" alt="veshpars logo" class="logo-img">
+        <span class="ss">Welcome to Veshpars</span>
+    </div>    
+        
+        <ul class="nav-links">
+            <li><a href="../veshpars.html">صفحه اصلی</a></li>
+            <li><a href="#">محصولات</a></li>
+            <li><a href="darB.html">درباره ما</a></li>
+            <li><a href="ertebat.html">ارتباط</a></li>
+        </ul>
+
+        <div class="nav-btn">
+            <button>ورود</button>
+            <button>ثبت‌نام</button>
+        </div>
+    </nav>
+
+    <div class="ertegha-go">
+        <h2 class="h2-ertegha">ارتقاع سایت</h2>
+        <h6 class="h6-ertegha">شما میتوانید با وشپارس سایت های خود را ارتقاع دهید</h6>
+        <a href="mahsool/ertegha.html">
+        <button class="btn-ertegha">مشاهده</button>
+        </a>
+    </div>
+
+    <div class="make-go">
+        <h2 class="h2-make"> خرید سایت بدون بک اند</h2>
+        <h6 class="h6-make">شما میتوانید با ارسال توضیحات مورد نظر برای ساخت سای از وشپارس سایت خریداری کنید.</h6>
+        <a href="mahsool/make.html">
+        <button class="btn-make">مشاهده</button>
+        </a>
+    </div>
+
+    <script>
+        for (let i = 0; i < 30; i++) {
+            let bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            let size = Math.random() * 30 + 10;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.background = Math.random() > 0.5 ? '#6a11cb' : '#2575fc';
+            bubble.style.left = Math.random() * 100 + 'vw';
+            bubble.style.animationDuration = (Math.random() * 13 + 12) + 's';
+            document.body.appendChild(bubble);
+        }
+    </script>
+</body>
+</html>
