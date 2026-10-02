@@ -18,60 +18,6 @@
   0% { transform: translateY(100vh); }
   100% { transform: translateY(-100vh); }
 }
-.ertegha-go {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 15px;
-  transform: translate(-50%, -50%);
-  box-shadow: 4px 4px 4px #ffffff;
-  text-align: center;
-  color: #ffffff;
-  z-index: 10;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px;
-  width: 600px;
-  height: 200px;
-  border: 2px solid #3498db;
-  gap: 12px;
-}
-
-.h2-ertegha {
-  font-size: 2rem;
-  margin: 0;
-  font-family: sans-serif, Tahoma;
-  font-weight: bold;
-  text-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
-}
-
-
-.h6-ertegha {
-  font-size: 1rem;
-  margin: 0;
-  color: #b0b0d0;
-  font-family: sans-serif, Tahoma;
-}
-
-.btn-ertegha {
-  margin-top: 10px;
-  padding: 10px 28px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #ffffff;
-  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(37, 117, 252, 0.4);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-ertegha:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(106, 17, 203, 0.6);
-}
 
 * {
   margin: 0;
@@ -220,4 +166,92 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 10px 25px;
+}
+
+.div-ertegha{
+  color: #b0b0d0;
+}
+
+.h6-ertegha.html{
+  color: #b0b0d0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.ertegha-go, .make-go {
+  display: block !important;
+  float: none !important;          
+  clear: both !important;         
+  position: static !important;  
+  
+  width: 90% !important;
+  max-width: 580px !important;
+  margin: 40px auto !important;
+  padding: 30px 20px !important;
+  
+  background: rgba(10, 15, 30, 0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 2px solid #58c7fa !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 25px rgba(88, 199, 250, 0.45) !important;
+  text-align: center !important;
+  box-sizing: border-box !important;
+}
+
+.h2-ertegha, .h2-make {
+  color: #ffffff !important;
+  font-size: 26px !important;
+  font-weight: bold !important;
+  margin-bottom: 12px !important;
+}
+
+.h6-ertegha, .h6-make {
+  color: #cbd5e1 !important;
+  font-size: 15px !important;
+  font-weight: normal !important;
+  line-height: 1.6 !important;
+  margin-bottom: 25px !important;
+}
+
+.btn-ertegha, .btn-make {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 42px !important;
+  border-radius: 30px !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.6) !important;
+  display: inline-block !important;
+}
+
+.div-tozihat-ertegha {
+  display: block !important;
+  width: 85% !important;
+  max-width: 800px !important;
+  margin: 50px auto !important; /* فاصله مشتی از نوبار و وسط‌چین */
+  padding: 35px 25px !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  border: 2px solid #58c7fa !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 30px rgba(88, 199, 250, 0.4) !important;
+  text-align: center !important;
+  direction: rtl !important;
+  box-sizing: border-box !important;
+}
+
+.h2-tozihat-ertegha {
+  color: #ffffff !important;
+  font-size: 26px !important;
+  font-weight: bold !important;
+  margin-bottom: 20px !important;
+}
+
+.h4-tozihat-ertegha {
+  color: #e2e8f0 !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  line-height: 1.9 !important;
+  margin: 0 !important;
 }
