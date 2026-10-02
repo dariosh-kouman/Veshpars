@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وشپارس/درباره ما</title>
+    <link rel="stylesheet" href="../veshpars.css">
+</head>
+<body class="veshpars-body">
+
+  <nav class="navbaz">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجوی محصول "autocomplete="off">
+      <ul id="searchResults" class="results-list"></ul>
+  </div>
+  </nav>
+
+    <nav class="navbar">
+    
+      <div class="logo">
+        <img src="../image-vershpars/veshpars.jpg" alt="veshpars logo" class="logo-img">
+        <span class="ss">Welcome to Veshpars</span>
+    </div>    
+        
+        <ul class="nav-links">
+            <li><a href="../veshpars.html">صفحه اصلی</a></li>
+            <li><a href="#">محصولات</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">ارتباط</a></li>
+        </ul>
+
+        <div class="nav-btn">
+            <button>ورود</button>
+            <button>ثبت‌نام</button>
+        </div>
+    </nav>
+    <div class="div-tozihat-darb">
+        <h2 class="h2-darb">درباره بنیان‌گذاران و اهداف وشپارس</h2>
+        
+        <div class="bio-section">
+            <h3 class="bio-name">محمد مهدی معصومی | هم‌بنیان‌گذار و مدیر ارشد نوآوری</h3>
+            <p class="bio-text">
+                جناب آقای محمد مهدی معصومی از پیشگامان عرصه تحلیل ساختارهای دیجیتال و برنامه‌نویسی وب بوده که با نگاهی جامع‌نگر و تمرکز بر معماری پیشرفته سامانه، سنگ‌بنای توسعه پلتفرم «وشپارس» را بنا نهادند. چشم‌انداز ایشان خلق زیرساخت‌های پایدار، روان و هوشمندی است که مرزهای کیفیت و بهره‌وری را در فضای وب ارتقا داده و راه‌حل‌های نوینی در خدمت جامعه توسعه‌دهندگان و کاربران قرار دهد.
+            </p>
+        </div>
+    
+        <hr class="bio-divider">
+    
+        <div class="bio-section">
+            <h3 class="bio-name">علی توجه | هم‌بنیان‌گذار و مدیر توسعه محصول</h3>
+            <p class="bio-text">
+                جناب آقای علی توجه به عنوان بازوی استراتژیک و متخصص پیاده‌سازی زیرساخت‌های نوین، همواره در جهت بهینه‌سازی تجارب کاربری و ارتقای متدهای فنی مجموعه پیشگام بوده‌اند. مساعی و تدابیر ایشان بستری قدرتمند جهت تسریع اهداف وشپارس رقم زده تا محصولاتی بی‌بدیل، مطمئن و همگام با فناوری‌های روز جهان به مرحله ظهور برسند.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        for (let i = 0; i < 30; i++) {
+            let bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            let size = Math.random() * 30 + 10;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.background = Math.random() > 0.5 ? '#6a11cb' : '#2575fc';
+            bubble.style.left = Math.random() * 100 + 'vw';
+            bubble.style.animationDuration = (Math.random() * 13 + 12) + 's';
+            document.body.appendChild(bubble);
+        }
+    </script>
+</body>
+</html>
 
