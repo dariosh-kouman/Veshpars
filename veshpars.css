@@ -55,13 +55,28 @@ input, textarea {
   font-family: sans-serif;
 }
 
+.navbaz {
+  position: relative !important;
+  z-index: 99999 !important;
+}
+
+.search-box {
+  position: relative !important;
+  z-index: 100000 !important;
+}
+
+.results-list {
+  position: absolute !important;
+  z-index: 100001 !important;
+}
+
 .navbar {
   padding: 15px 40px;
   background-color: #1a1a24;
   border-bottom: 2px solid #ff4757;
   position: sticky;
   top: 0;
-  z-index: 2000; 
+  z-index: 2001;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +84,6 @@ input, textarea {
   background-color: #1a1a24;
   border-bottom: 2px solid #ff4757;
 }
-
 
 .logo {
   color: #fff;
@@ -621,4 +635,66 @@ html, body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #ff5588, #7adeff);
   box-shadow: 0 0 10px rgba(88, 199, 250, 0.6);
+}
+
+.upgrade-bar {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 24px;
+  background: #1a1a24;
+  border-top: 2px solid #ff4757;
+  color: #fff;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.upgrade-bar__info {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.upgrade-bar__info span {
+  color: #d7d7df;
+}
+
+.upgrade-bar__button {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  background: #ff4757;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.upgrade-bar__button:hover {
+  background: #e83d4c;
+}
+
+body.veshpars-body {
+  padding-bottom: 76px;
+}
+
+@media (max-width: 600px) {
+  .upgrade-bar {
+    padding: 12px 14px;
+  }
+
+  .upgrade-bar__info {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .upgrade-bar__button {
+    padding: 9px 13px;
+  }
 }
