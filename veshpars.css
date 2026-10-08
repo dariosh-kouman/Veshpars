@@ -1,18 +1,47 @@
+*, *::before, *::after {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 .veshpars-body{
   background-color: black;
   margin: 0;
   height: 100vh;
-  overflow: hidden;
-  position: relative
+  /*overflow: hidden;*/
+  position: relative;
 }
 
 .bubble {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   border-radius: 50%;
   filter: blur(2px);
   animation: move-bubbles infinite linear;
   opacity: 0.25;
+  pointer-events: none; 
+  z-index: 0;
 }
+
+@keyframes move-bubbles {
+  0% {
+    transform: translateY(105vh);
+  }
+  100% {
+    transform: translateY(-10vh);
+    pacity: 0.25;
+  }
+}
+
 
 @keyframes move-bubbles {
   0% { transform: translateY(100vh); }
@@ -490,6 +519,12 @@ padding: 10px 25px;
     margin-bottom: 35px;
 }
 
+.agency-features a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .feature-card {
     flex: 1 1 280px;
     max-width: 320px;
@@ -561,4 +596,29 @@ padding: 10px 25px;
   padding: 15px 40px;
   background-color: #1a1a24;
   border-bottom: 2px solid #ff4757;
+}
+
+html, body {
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #58c7fa #0c0d14;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08090f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff3366, #58c7fa);
+  border-radius: 10px;
+  border: 2px solid #08090f;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff5588, #7adeff);
+  box-shadow: 0 0 10px rgba(88, 199, 250, 0.6);
 }
