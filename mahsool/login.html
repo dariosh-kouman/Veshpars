@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../veshpars.css">
+    <title>وشپارس/ورود</title>
+</head>
+<body class="veshpars-body">
+
+    <nav class="navbaz">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="جستجوی محصول "autocomplete="off">
+        <ul id="searchResults" class="results-list"></ul>
+    </div>
+    </nav>
+  
+      <nav class="navbar">
+      
+        <div class="logo">
+        <a href="../veshpars.html">
+          <img src="../image-vershpars/vv.png" alt="veshpars logo" class="logo-img">
+        </a>
+          <span class="ss" id="welcomeUser">Welcome to Veshpars</span>
+      </div>    
+          
+          <ul class="nav-links">
+              <li><a href="../veshpars.html">صفحه اصلی</a></li>
+              <li><a href="mahsool/all-mahsoo.html">محصولات</a></li>
+              <li><a href="mahsool/darB.html">درباره ما</a></li>
+              <li><a href="mahsool/ertebat.html">ارتباط</a></li>
+          </ul>
+  
+          <div class="nav-btn">
+            <a href="login.html"><button type="button">ورود</button></a>
+            <button type="button">ثبت‌نام</button>
+        </div>        
+      </nav>
+      <div class="login-box">
+        <h2>ورود به وشپارس</h2>
+    
+        <div id="step-email">
+            <input type="email" id="userEmail" placeholder="ایمیل خود را وارد کنید">
+            <button onclick="handleSendCode()">ارسال کد تایید</button>
+        </div>
+    
+        <div id="step-otp" style="display:none">
+            <p>کد ۶ رقمی ارسال‌شده به ایمیلت را وارد کن:</p>
+            <input type="text" id="otpInput" maxlength="6" placeholder="-----">
+            <button onclick="handleVerifyOtp()">تایید کد</button>
+        </div>
+    
+        <div id="step-username" style="display:none">
+            <p>یه اسم برای خودت انتخاب کن:</p>
+            <input type="text" id="customNameInput" placeholder="اسم دلخواه">
+            <button onclick="handleSaveUsername()">ثبت و ورود</button>
+        </div>
+    </div>
+      <script>
+        for (let i = 0; i < 30; i++) {
+            let bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            let size = Math.random() * 30 + 10;
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.background = Math.random() > 0.5 ? '#6a11cb' : '#2575fc';
+            bubble.style.left = Math.random() * 100 + 'vw';
+            bubble.style.animationDuration = (Math.random() * 13 + 12) + 's';
+            document.body.appendChild(bubble);
+        }
+    </script>
+</body>
+ <script src="../veshpars.js"></script>
+</html>
+
+  
